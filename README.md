@@ -1,2 +1,3 @@
-# lex.php
-Lexing with PHP 
+# Lexing with PHP 
+
+A lexer for PHP
