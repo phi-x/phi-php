@@ -1,0 +1,31 @@
+# Development
+/vendor/
+/composer.lock
+Homestead.json
+Homestead.yaml
+*.local
+
+# Environment
+.env
+.env.backup
+
+# Cache
+*.cache
+.mf
+
+# Logs
+logs/
+*.log
+*.log*
+_log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

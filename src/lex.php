@@ -1,10 +1,10 @@
 <?php
-function parse(string $lex)
-{    
-    $chars = str_split($lang);
 
-    foreach ($chars as $column => $char)
-    {
-        //...
+function parse(string $code)
+{
+    $chars = str_split($code);
+
+    foreach ($chars as $column => $char) {
+        // ...
     }
 }

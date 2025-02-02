@@ -1,0 +1,65 @@
+{
+	"name": "siguici/phi",
+	"description": "Phi (Φ) - A modern PHP superset with strong typing and OOP enhancements",
+	"type": "library",
+	"keywords": [
+		"phi",
+		"php-transpiler",
+		"oop",
+		"scripting-language",
+		"blade-template",
+		"typesafe",
+		"templating-engine",
+		"oriented-object-programming",
+		"programming-language"
+	],
+	"authors": [
+		{
+			"name": "Sigui Kessé Emmanuel",
+			"email": "siguici@proton.me",
+			"homepage": "https://github.com/siguici"
+		}
+	],
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Phi\\": "src/"
+		}
+	},
+	"require": {
+		"php": ">=8.4"
+	},
+	"scripts": {
+		"post-install-cmd": ["Phi\\Installer::postInstall"],
+		"post-update-cmd": ["Phi\\Installer::postUpdate"],
+		"analyse": "phpstan analyse --ansi --memory-limit=-1 --debug",
+		"check": "pint --test -v",
+		"coverage": "pest --coverage",
+		"debug": ["@check", "@analyse", "@review", "@test"],
+		"fix": ["@refactor", "@lint"],
+		"lint": "pint -v",
+		"test": "pest --colors=always",
+		"retest": "pest --retry",
+		"review": "rector --dry-run --debug",
+		"refactor": "rector"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-main": "0.x-dev"
+		}
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"sort-packages": true,
+		"preferred-install": "dist",
+		"allow-plugins": {
+			"pestphp/pest-plugin": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require-dev": {
+		"siguici/php-devtools": "^1.0"
+	}
+}
