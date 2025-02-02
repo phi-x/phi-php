@@ -2,13 +2,19 @@
 
 namespace Phi;
 
+use Phi\Console\Utils\Input;
+use Phi\Console\Utils\Output;
+
 class Program
 {
     public function execute(array $args): int
     {
         $args = array_slice($args, 1);
 
-        dump($args);
+        if (! count($args)) {
+            $input = Input::scan('❯ ');
+            Output::print($input);
+        }
 
         return 0;
     }

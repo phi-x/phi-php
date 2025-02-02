@@ -3,7 +3,6 @@
 namespace Phi;
 
 use Phi\Console\Utils\Color;
-use Phi\Console\Utils\Icon;
 
 class Installer
 {

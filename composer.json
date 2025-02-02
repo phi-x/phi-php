@@ -27,7 +27,8 @@
 		}
 	},
 	"require": {
-		"php": ">=8.4"
+		"php": ">=8.4",
+        "ext-readline": "*"
 	},
 	"scripts": {
 		"analyse": "phpstan analyse --ansi --memory-limit=-1 --debug",
