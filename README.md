@@ -1,52 +1,98 @@
-# Phi (Φ)
+# Phi <a href="https://phi-x.github.io" title="Phi"><img src="https://github.com/phi-x/art/blob/HEAD/phi-logo.svg?raw=true" alt="φ" height="24"/></a>
 
 **Phi** is a modern transpiler that enhances PHP with strong typing,
 object-oriented improvements, and an integrated Blade-inspired templating system.
-Much like TypeScript for JavaScript or C++ for C, Phi extends PHP with powerful
-new features while maintaining full compatibility with existing PHP code.
+
+---
+
+## What is Phi?
+
+Phi is a next-generation PHP transpiler that introduces strong typing,
+advanced object-oriented programming features, and an optimized templating system.
+By providing a more structured and scalable approach to PHP development,
+Phi helps developers write cleaner, more maintainable, and error-resistant code.
+
+## Why Phi?
+
+- **Enhances PHP without breaking compatibility**: Phi allows developers to gradually
+adopt new features without rewriting existing PHP projects.
+- **Eliminates the need for PHPDoc and annotations**: Types are checked at both transpilation
+and runtime, reducing redundant documentation.
+- **Brings TypeScript-like flexibility**: Supports both static and dynamic typing
+for a more robust development experience.
+- **Integrates a powerful templating engine**: A Blade-inspired syntax simplifies
+HTML rendering for modern web applications.
+
+---
 
 ## Features
 
-- **Strong Typing**: Enforce and validate types both at compile-time and runtime,
-helping prevent bugs early in the development process.
-- **Object-Oriented Enhancements**: Phi offers advanced OOP features beyond
-PHP's native capabilities, making it easier to write scalable and maintainable code.
-- **Dynamic and Extensible Typing**: A flexible, TypeScript-inspired type system
-that allows you to leverage both static and dynamic typing.
-- **Integrated Templating**: Phi comes with a Blade-like templating system,
-which simplifies rendering HTML by keeping templates clean and organized,
-similar to Laravel's Blade.
-- **Seamless PHP Compatibility**: Any valid PHP code is also valid Phi code.
-This means you can incrementally adopt Phi in your existing PHP projects
-without any friction.
-- **Eliminates PHPDoc & Annotations**: No need for PHPDoc comments
-or annotations—types are checked directly in the code,
+- **Strong Typing**: Enforce and validate types at both compile-time and runtime,
+reducing bugs early in development.
+- **Advanced Object-Oriented Features**: Provides enhanced OOP capabilitie
+s beyond native PHP, making code more scalable and maintainable.
+- **Dynamic and Extensible Typing**: A flexible type system inspired by TypeScript,
+allowing both static and dynamic typing.
+- **Integrated Templating Engine**: A Blade-like system for cleaner,
+more structured HTML rendering, similar to Laravel's Blade.
+- **Full PHP Compatibility**: Any valid PHP code is also valid Phi code,
+enabling seamless integration into existing projects.
+- **No Need for PHPDoc & Annotations**: Types are checked directly in the code,
 reducing boilerplate and improving readability.
+
+---
+
+## Quick Start
+
+### Installation
+
+#### Unix-based systems (Linux/macOS)
+
+```sh
+curl -fsSL https://github.com/phi-x/phi/raw/main/install.sh | sh
+```
+
+#### Windows (PowerShell)
+
+```ps1
+powershell -c "irm https://raw.githubusercontent.com/phi-x/phi/main/install.ps1 | iex"
+```
+
+### Hello World Example
+
+```ske
+Hello ${name ?? 'World'}!
+```
+
+---
 
 ## Installation
 
-Phi can be installed easily via Composer or from source.
+
+Phi can be installed via Composer or built from source.
 
 ### Composer Installation
 
-```bash
-composer global require siguici/phi
+```sh
+composer global require phi-x/phi
 ```
 
 ### From Source
 
-Clone the repository and compile the transpiler:
+Clone the repository and build the transpiler:
 
 ```sh
-git clone https://github.com/siguici/phi.git
+git clone https://github.com/phi-x/phi.git
 cd phi
 make install
 ```
 
+---
+
 ## Usage
 
-Phi allows you to transpile Phi code into PHP code. Once installed,
-you can run Phi via the command line to convert `.phi` files to `.php`.
+Phi transpiles `.phi` files into `.php`, enabling strong typing and additional
+features while maintaining PHP compatibility.
 
 ### Example Command
 
@@ -54,14 +100,12 @@ you can run Phi via the command line to convert `.phi` files to `.php`.
 phi source.phi
 ```
 
-This will transpile your `source.phi` file into a PHP file, ready for execution.
-The Phi compiler automatically performs optimizations
-to ensure your PHP code runs smoothly and efficiently.
+This converts `source.phi` into a PHP file, optimized for performance and execution.
 
 ### Example Code
 
 ```phi
-// Example of a basic function with strong typing
+// Strongly-typed function in Phi
 function greet(string $name): string {
     return "Hello, $name!";
 }
@@ -69,7 +113,7 @@ function greet(string $name): string {
 echo greet("World");
 ```
 
-Transpiled **PHP Code**:
+#### Transpiled PHP Code
 
 ```php
 <?php
@@ -83,31 +127,37 @@ echo greet("World");
 ?>
 ```
 
-The Phi code shown here is transpiled into PHP code that is fully executable.
-Phi checks types directly during transpilation,
-ensuring that no type mismatches occur during runtime.
+Phi ensures that type mismatches are caught at transpilation,
+making PHP development safer and more efficient.
+
+---
 
 ## Contributing
 
-We welcome contributions to Phi! Whether it's fixing bugs, suggesting new features,
+We welcome contributions! Whether it's fixing bugs, suggesting new features,
 or improving documentation, feel free to submit pull requests or open issues.
 
 ### How to Contribute
 
-  1. Fork the repository.
-  2. Create a new branch for your feature or fix.
-  3. Write your code and add tests if necessary.
-  4. Submit a pull request.
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Implement your changes and add tests where needed.
+4. Submit a pull request.
 
-Please make sure to follow the existing coding style and conventions when contributing.
+Please follow the project's coding style and guidelines.
+
+---
 
 ## License
 
-**Phi (Φ)** is licensed under the MIT License.
+**Phi φ** is licensed under the MIT License.
 See the [LICENSE.md](LICENSE.md) file for more details.
+
+---
 
 ## Support
 
-For any issues, questions, or feedback,
-please [open an issue](https://github.com/siguici/phi/issues/new/choose)
-or join [our community discussions](https://github.com/siguici/siguici/discussions).
+For any issues, questions, or feedback:
+
+- [Open an issue](https://github.com/phi-x/phi/issues/new/choose)
+- Join [our community discussions](https://github.com/phi-x/phi/discussions)
