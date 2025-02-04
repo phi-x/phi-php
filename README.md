@@ -6,7 +6,7 @@ object-oriented improvements, and an integrated Blade-inspired templating system
 
 ## Quick Start
 
-### **Install Phi
+### Install Phi
 
 Install Phi from [Composer](https://getcomposer.org) with:
 
@@ -28,7 +28,7 @@ Run it with:
 phi run hello --name=Phi
 ```
 
-This displays **Hello, Phi!**.
+This displays: **Hello, Phi!**
 
 ---
 
