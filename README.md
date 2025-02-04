@@ -1,7 +1,34 @@
 # Phi <a href="https://phi-x.github.io" title="Phi"><img src="https://github.com/phi-x/art/blob/HEAD/phi-logo.svg?raw=true" alt="φ" height="24"/></a>
-
 **Phi** is a modern transpiler that enhances PHP with strong typing,
 object-oriented improvements, and an integrated Blade-inspired templating system.
+
+---
+
+## Quick Start
+
+### **Install Phi
+
+Install Phi from [Composer](https://getcomposer.org) with:
+
+```sh
+composer global require phi-x/phi:dev-main
+```
+
+### Try Phi
+
+Create a `hello.phi` file:
+
+```phi
+Hello, $name!
+```
+
+Run it with:
+
+```sh
+phi run hello --name=Phi
+```
+
+This displays **Hello, Phi!**.
 
 ---
 
@@ -42,52 +69,13 @@ reducing boilerplate and improving readability.
 
 ---
 
-## Quick Start
-
-### Installation
-
-#### Unix-based systems (Linux/macOS)
-
-```sh
-curl -fsSL https://github.com/phi-x/phi/raw/main/install.sh | sh
-```
-
-#### Windows (PowerShell)
-
-```ps1
-powershell -c "irm https://raw.githubusercontent.com/phi-x/phi/main/install.ps1 | iex"
-```
-
-### Hello World Example
-
-```ske
-Hello ${name ?? 'World'}!
-```
-
----
-
 ## Installation
 
-
-Phi can be installed via Composer or built from source.
-
-### Composer Installation
+Phi can be installed via Composer:
 
 ```sh
-composer global require phi-x/phi
+composer global require phi-x/phi:dev-main
 ```
-
-### From Source
-
-Clone the repository and build the transpiler:
-
-```sh
-git clone https://github.com/phi-x/phi.git
-cd phi
-make install
-```
-
----
 
 ## Usage
 
@@ -104,9 +92,10 @@ This converts `source.phi` into a PHP file, optimized for performance and execut
 
 ### Example Code
 
-```phi
+```php
+<?php
 // Strongly-typed function in Phi
-function greet(string $name): string {
+function greet<T extends string>(T $name): T {
     return "Hello, $name!";
 }
 
