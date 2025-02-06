@@ -2,10 +2,8 @@
 **Phi** is a modern transpiler that enhances PHP with strong typing,
 object-oriented improvements, and an integrated Blade-inspired templating system.
 
-[![php-icon]][php-link]
 [![packagist-version-icon]][packagist-version-link]
 [![packagist-download-icon]][packagist-download-link]
-[![actions-icon]][actions-link]
 
 ---
 
@@ -156,14 +154,8 @@ For any issues, questions, or feedback:
 - [Open an issue](https://github.com/phi-x/phi/issues/new/choose)
 - Join [our community discussions](https://github.com/phi-x/phi/discussions)
 
-[php-icon]: https://img.shields.io/badge/PHP-ccc.svg?style=flat&logo=php
-[php-link]: https://github.com/phi-x/phi/search?l=php "Phi PHP code"
-
 [packagist-version-icon]: https://img.shields.io/packagist/v/phi-x/phi
 [packagist-version-link]: https://packagist.org/packages/phi-x/phi "Phi Releases"
 
 [packagist-download-icon]: https://img.shields.io/packagist/dt/phi-x/phi
 [packagist-download-link]: https://packagist.org/packages/phi-x/phi "Phi Downloads"
-
-[actions-icon]: https://github.com/phi-x/phi/workflows/CI/badge.svg
-[actions-link]: https://github.com/phi-x/phi/actions "Phi status"
