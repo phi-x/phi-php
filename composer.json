@@ -22,13 +22,19 @@
       "homepage": "https://github.com/siguici"
     }
   ],
+  "support": {
+    "source": "https://github.com/phi-x/phi",
+    "issues": "https://github.com/phi-x/phi/issues",
+    "chat": "https://github.com/orgs/phi-x/discussions"
+  },
   "autoload": {
     "psr-4": {
       "Phi\\": "src/"
-    }
+    },
+    "files": ["src/phi.php"]
   },
   "require": {
-    "php": ">=8.4",
+    "php": ">=8.2",
     "ext-readline": "*"
   },
   "require-dev": {
