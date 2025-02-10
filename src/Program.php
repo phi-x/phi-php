@@ -7,6 +7,9 @@ use Phi\Console\Utils\Output;
 
 class Program
 {
+    /**
+     * @param  null|array<string>  $argv
+     **/
     public function execute(array $args): int
     {
         $args = array_slice($args, 1);

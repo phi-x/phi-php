@@ -5,14 +5,22 @@ if (php_sapi_name() !== 'cli') {
     exit;
 }
 
-if (file_exists(__DIR__.'/../../../autoload.php')) {
-    include __DIR__.'/../../../autoload.php';
-} else {
-    require __DIR__.'/../vendor/autoload.php';
+$loaded = false;
+
+foreach (['../../..', '..'] as $dir) {
+    if (file_exists($file = __DIR__."/$dir/vendor/autoload.php")) {
+        include $file;
+        $loaded = true;
+        break;
+    }
 }
 
-$phi = new Phi\Program;
+if (!$loaded) {
+    fwrite(STDERR, 'Unable to find file `autoload.php`.'.PHP_EOL);
+    fwrite(STDERR, 'Make sure you have run `composer install`.'.PHP_EOL);
+    exit(1);
+}
 
-$code = $phi->execute($argv ?? $_SERVER['argv'] ?? []);
+$phi = new Phi\Application();
 
-exit($code);
+$phi->run($argv);
