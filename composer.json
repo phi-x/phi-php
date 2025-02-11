@@ -34,7 +34,7 @@
     "files": ["src/phi.php"]
   },
   "require": {
-    "php": ">=8.2",
+    "php": "^8.4",
     "ext-readline": "*"
   },
   "require-dev": {

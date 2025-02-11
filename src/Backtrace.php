@@ -4,33 +4,33 @@ namespace Phi;
 
 final class Backtrace
 {
-    public const IGNORE_ARGS = DEBUG_BACKTRACE_IGNORE_ARGS;
+    public const int IGNORE_ARGS = DEBUG_BACKTRACE_IGNORE_ARGS;
 
-    public const PROVIDE_OBJECT = DEBUG_BACKTRACE_PROVIDE_OBJECT;
+    public const int PROVIDE_OBJECT = DEBUG_BACKTRACE_PROVIDE_OBJECT;
 
-    public const FILE_FIELD = 'file';
+    public const string FILE_FIELD = 'file';
 
-    public const LINE_FIELD = 'line';
+    public const string LINE_FIELD = 'line';
 
-    public const CLASS_FIELD = 'class';
+    public const string CLASS_FIELD = 'class';
 
-    public const OBJECT_FIELD = 'object';
+    public const string OBJECT_FIELD = 'object';
 
-    public const FUNCTION_FIELD = 'function';
+    public const string FUNCTION_FIELD = 'function';
 
-    public const TYPE_FIELD = 'type';
+    public const string TYPE_FIELD = 'type';
 
-    public const ARGS_FIELD = 'args';
+    public const string ARGS_FIELD = 'args';
 
-    public const DEFAULT_FLAGS = self::IGNORE_ARGS;
+    public const int DEFAULT_FLAGS = self::IGNORE_ARGS;
 
-    public const DEFAULT_LIMIT = 0;
+    public const int DEFAULT_LIMIT = 0;
 
-    public const DEFAULT_RESET = 0;
+    public const int DEFAULT_RESET = 0;
 
-    public const DEFAULT_FIELD = self::FILE_FIELD;
+    public const string DEFAULT_FIELD = self::FILE_FIELD;
 
-    public const DEFAULT_OFFSET = 0;
+    public const int DEFAULT_OFFSET = 0;
 
     /**
      * @var list<array{function:string,line?:int,file?:string,class?:class-string,type?:string,args?:list<mixed>,object?:object}>
