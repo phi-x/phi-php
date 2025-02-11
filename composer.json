@@ -30,12 +30,21 @@
   "autoload": {
     "psr-4": {
       "Phi\\": "src/"
-    },
-    "files": ["src/phi.php"]
+    }
   },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "pkg/*",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
   "require": {
     "php": "^8.4",
-    "ext-readline": "*"
+    "ext-readline": "*",
+    "phi-x/core": "*"
   },
   "require-dev": {
     "siguici/php-devtools": "^1.0"
