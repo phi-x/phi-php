@@ -1,6 +1,6 @@
 <?php
 
-namespace Phi\Support;
+namespace Phi;
 
 use Closure;
 use Phi\Exception\CannotReflect;

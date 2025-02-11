@@ -3,8 +3,8 @@
 namespace Phi\Concerns;
 
 use Phi\Exception\NotFound;
-use Phi\Support\Reflector;
-use Phi\Support\Singleton;
+use Phi\Reflector;
+use Phi\Singleton;
 
 trait HasAccessor
 {

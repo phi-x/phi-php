@@ -1,6 +1,6 @@
 <?php
 
-namespace Phi\Support;
+namespace Phi;
 
 use Phi\Exception\BadValue;
 use Phi\Exception\NotFound;

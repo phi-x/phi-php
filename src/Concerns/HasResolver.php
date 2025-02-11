@@ -3,7 +3,7 @@
 namespace Phi\Concerns;
 
 use Phi\Exception\NotFound;
-use Phi\Support\Singleton;
+use Phi\Singleton;
 
 trait HasResolver
 {

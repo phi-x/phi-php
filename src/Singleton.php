@@ -1,6 +1,6 @@
 <?php
 
-namespace Phi\Support;
+namespace Phi;
 
 final class Singleton
 {
