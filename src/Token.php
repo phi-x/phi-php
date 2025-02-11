@@ -4,5 +4,5 @@ namespace Phi;
 
 class Token
 {
-    public function constructor(readonly string $type, readonly string $value) {}
+    public function __construct(readonly string $type, readonly string $value) {}
 }
