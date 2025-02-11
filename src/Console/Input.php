@@ -1,6 +1,6 @@
 <?php
 
-namespace Phi\Console\Utils;
+namespace Phi\Console;
 
 class Input
 {

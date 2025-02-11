@@ -71,11 +71,11 @@ final class Container implements ContainerInterface
 
     public function build(string $id): mixed
     {
-        if (! isset($this->components[$id])) {
-            throw NotFound::with('Component %s not found.', [$id]);
+        if (! (isset($this->components[$id]) || class_exists($id))) {
+            throw NotFound::with('Could not build %s.', [$id]);
         }
 
-        $component = $this->components[$id];
+        $component = $this->components[$id] ?? $id;
 
         if (is_array($component)) {
             if (class_exists($id)) {

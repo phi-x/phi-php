@@ -2,17 +2,23 @@
 
 namespace Phi;
 
+use Phi\Console\Input;
+use Phi\Console\Output;
+
 class Application extends Program
 {
     /**
-     * @param  null|array<string>  $argv
+     * @param  null|array<string>  $args
      **/
-    public function run(?array $argv = null): never
+    public function execute(array $args, Input $input, Output $output): int
     {
-        /** @var array<string> */
-        $args = $argv ?? $_SERVER['argv'] ?? [];
-        $code = $this->execute($args);
+        $output::print("Project: $this->name\n\t$this->description".PHP_EOL);
 
-        exit($code);
+        if (! count($args)) {
+            $code = $input::scan('❯ ');
+            $output::print($code);
+        }
+
+        return 0;
     }
 }

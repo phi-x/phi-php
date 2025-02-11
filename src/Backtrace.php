@@ -39,8 +39,6 @@ final class Backtrace
 
     public function __construct(int $flags = self::DEFAULT_FLAGS, int $reset = self::DEFAULT_RESET, int $limit = self::DEFAULT_LIMIT)
     {
-        $reset++;
-
         if ($limit !== 0) {
             $limit++;
         }

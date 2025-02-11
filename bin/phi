@@ -15,12 +15,12 @@ foreach (['../../..', '..'] as $dir) {
     }
 }
 
-if (!$loaded) {
+if (! $loaded) {
     fwrite(STDERR, 'Unable to find file `autoload.php`.'.PHP_EOL);
     fwrite(STDERR, 'Make sure you have run `composer install`.'.PHP_EOL);
     exit(1);
 }
 
-$phi = new Phi\Application();
+$phi = new Phi\Application(__FILE__, dirname($file, 2));
 
 $phi->run($argv);

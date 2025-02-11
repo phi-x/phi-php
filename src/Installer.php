@@ -2,7 +2,7 @@
 
 namespace Phi;
 
-use Phi\Console\Utils\Color;
+use Phi\Console\Color;
 
 class Installer
 {
