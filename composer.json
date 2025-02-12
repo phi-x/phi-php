@@ -25,7 +25,8 @@
   "support": {
     "source": "https://github.com/phi-x/phi",
     "issues": "https://github.com/phi-x/phi/issues",
-    "chat": "https://github.com/orgs/phi-x/discussions"
+    "chat": "https://github.com/orgs/phi-x/discussions",
+    "wiki": "https://github.com/phi-x/phi/wiki"
   },
   "autoload": {
     "psr-4": {

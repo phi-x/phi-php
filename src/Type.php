@@ -2,7 +2,7 @@
 
 namespace Phi;
 
-class Type
+abstract class Type
 {
     public const BOOLEAN = 'boolean';
 
