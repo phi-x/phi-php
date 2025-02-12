@@ -109,11 +109,27 @@ abstract class Program
     /**
      * @param  null|array<string>  $argv
      **/
-    public function run(?array $argv = null): never
+    public function run(?array $argv = null, ?int $argc = null): never
     {
         /** @var array<string> */
         $args = $argv ?? $_SERVER['argv'] ?? [];
+        $count ??= $argc ?? count($args);
+
+        if ($count !== count($args)) {
+            exit_error('Wrong arguments count');
+        }
+
+        if ($count < 1) {
+            exit_error('No argument given');
+        }
+
+        $argv0 = $argv[0];
+        $binFile = realpath($argv0);
         $args = array_slice($args, 1);
+
+        if ($binFile !== $this->binFile && basename($this->binFile) !== basename($binFile) && dirname($binFile) !== dirname(__DIR__)) {
+            exit_error('Cannot run %s from %s', $this->binFile, $argv0);
+        }
 
         /** @var Input */
         $input = $this->container->get('input');

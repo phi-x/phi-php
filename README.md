@@ -72,12 +72,26 @@ reducing boilerplate and improving readability.
 
 ---
 
+## Requirements
+
+- [PHP](https://php.net/) 8.4 or above
+(at least 8.4.3 recommended to avoid potential bugs)
+- [Composer](https://getcomposer.org/)
+- [Git](https://git-scm.com/)
+- [Node](https://nodejs.org/) with [NPM](https://npmjs.com/) (Optional)
+
 ## Installation
 
-Phi can be installed via Composer:
+- Install Phi from [Packagist](https://packagist.org/packages/ske/bin) using [Composer](https://getcomposer.org):
 
 ```sh
 composer global require phi-x/phi:dev-main
+```
+
+- Install Phi with [NPM](https://npmjs.com/package/phi-x/phi) using [Node](https://nodejs.org/)
+
+```bash
+npm i -g @phi-x/phi@latest
 ```
 
 ## Usage

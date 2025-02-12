@@ -3,8 +3,9 @@
 
 declare(strict_types=1);
 
-if (php_sapi_name() !== 'cli') {
-    exit;
+if (! in_array(PHP_SAPI, ['cli', 'phpdbg'])) {
+    fprintf(STDERR, 'Cannot run %s from %s', __FILE__, PHP_SAPI);
+    exit(1);
 }
 
 $loaded = false;
