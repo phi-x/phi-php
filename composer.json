@@ -37,10 +37,7 @@
     "wiki": "https://github.com/phi-x/phi/wiki"
   },
   "autoload": {
-    "psr-4": {
-      "Phi\\": "src/"
-    },
-    "files": ["src/phi.php"]
+    "files": ["src/autoload.php"]
   },
   "require": {
     "php": "^8.4",

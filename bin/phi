@@ -12,16 +12,14 @@ $loaded = false;
 
 foreach (['../../..', '..'] as $dir) {
     if (file_exists($file = __DIR__."/$dir/vendor/autoload.php")) {
-        include $file;
+        include_once $file;
         $loaded = true;
         break;
     }
 }
 
 if (! $loaded) {
-    fwrite(STDERR, 'Unable to find file `autoload.php`.'.PHP_EOL);
-    fwrite(STDERR, 'Make sure you have run `composer install`.'.PHP_EOL);
-    exit(1);
+    require_once __DIR__.'/../src/autoload.php';
 }
 
 $phi = new Phi\Application(__FILE__, dirname($file, 2));
