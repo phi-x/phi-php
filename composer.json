@@ -28,6 +28,9 @@
     "ftp-server",
     "put-files",
     "get-files",
+    "input",
+    "output",
+    "stream",
     "cli-app"
   ],
   "homepage": "https://phi-x.github.io",
