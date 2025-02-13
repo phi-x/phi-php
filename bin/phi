@@ -10,6 +10,6 @@ if (! in_array(PHP_SAPI, ['cli', 'phpdbg'])) {
 
 require_once dirname(__DIR__).DIRECTORY_SEPARATOR.'autoload.php';
 
-$phi = new Phi\Application(__FILE__, dirname($file, 2));
+$phi = new Phi\Application(__FILE__, getcwd());
 
 $phi->run($argv);
