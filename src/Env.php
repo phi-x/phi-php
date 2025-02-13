@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Phi;
 
 class Env implements \ArrayAccess, \Countable, \IteratorAggregate, \Stringable

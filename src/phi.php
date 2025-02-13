@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Phi\Backtrace;
 use Phi\Config\Loader as ConfigLoader;
 use Phi\FtpClient;

@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+declare(strict_types=1);
+
 $bin = realpath(__DIR__.'/bin/phi');
 
 $contents = file_get_contents($bin);

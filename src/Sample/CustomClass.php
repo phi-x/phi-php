@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Phi\Sample;
 
 final class CustomClass implements CustomInterface

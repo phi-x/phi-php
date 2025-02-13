@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Phi\Concerns;
 
 use Phi\Exceptions\NotFound;

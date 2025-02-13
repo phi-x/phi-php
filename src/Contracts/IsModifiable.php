@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Phi\Contracts;
 
 use Phi\Exceptions\IsNotFound;

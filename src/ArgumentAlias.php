@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Phi;
 
 /**
@@ -34,7 +36,7 @@ trait ArgumentAlias
     {
         $alias = Filter::sanitize_alias($alias);
         if (! Filter::validate_alias($alias)) {
-            throw new \InvalidArgumentException('Invalid alias given', Exception::ORDER_NAME_ERROR_TYPE);
+            throw new \InvalidArgumentException('Invalid alias given', Exceptions::ORDER_NAME_ERROR_TYPE);
         }
 
         return $this;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Phi;
 
 /**
@@ -21,7 +23,7 @@ class Command extends AbstractCommand
     {
         $name = Filter::sanitize_order($name);
         if (! Filter::validate_order($name)) {
-            throw new \InvalidArgumentException('Invalid command name given', Exception::ORDER_NAME_ERROR_TYPE);
+            throw new \InvalidArgumentException('Invalid command name given', Exceptions::ORDER_NAME_ERROR_TYPE);
         }
 
         $this->name = $name;
@@ -95,7 +97,7 @@ class Command extends AbstractCommand
             }
 
             if (! isset($action)) {
-                throw new \RuntimeException('Invalid arguments given', Exception::EXEC_ARGS_ERROR_TYPE);
+                throw new \RuntimeException('Invalid arguments given', Exceptions::EXEC_ARGS_ERROR_TYPE);
 
                 return false;
             }
@@ -121,11 +123,11 @@ class Command extends AbstractCommand
         $name = Filter::sanitize_order($name);
 
         if (! Filter::validate_order($name)) {
-            throw new \InvalidArgumentException('Invalid action name given', Exception::ORDER_NAME_ERROR_TYPE);
+            throw new \InvalidArgumentException('Invalid action name given', Exceptions::ORDER_NAME_ERROR_TYPE);
         }
 
         if (isset($this->actions[$name])) {
-            throw new \RuntimeException("$name is already used as action name", Exception::ORDER_NAME_ERROR_TYPE);
+            throw new \RuntimeException("$name is already used as action name", Exceptions::ORDER_NAME_ERROR_TYPE);
         }
 
         return $this->actions[$name] = new CommandAction($this, $name, $handler, $alias);
