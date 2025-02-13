@@ -39,6 +39,11 @@
     "stream",
     "type",
     "let var",
+    "events",
+    "event-listener",
+    "event-emitter",
+    "emit-event",
+    "listen-event",
     "cli-app"
   ],
   "homepage": "https://phi-x.github.io",
