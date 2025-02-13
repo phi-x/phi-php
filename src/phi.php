@@ -1,6 +1,7 @@
 <?php
 
 use Phi\Backtrace;
+use Phi\Config\Loader as ConfigLoader;
 use Phi\FtpClient;
 use Phi\FtpDotenv;
 use Phi\FtpServer;
@@ -130,4 +131,16 @@ if (! function_exists('let')) {
     {
         return Let::var($type, $value);
     }
+}
+
+function config_loader(string $dir): ConfigLoader
+{
+
+    static $loaders;
+
+    if (! isset($loaders[$dir])) {
+        $loaders[$dir] = new ConfigLoader($dir);
+    }
+
+    return $loaders[$dir];
 }

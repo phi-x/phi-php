@@ -39,6 +39,7 @@
     "stream",
     "type",
     "let var",
+    "array-config",
     "events",
     "event-listener",
     "event-emitter",
