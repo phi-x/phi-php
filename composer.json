@@ -31,6 +31,8 @@
     "input",
     "path-parsing",
     "path-parser",
+    "query-parsing",
+    "query-parser",
     "output",
     "stream",
     "cli-app"
