@@ -23,7 +23,12 @@
     "installer",
     "dotenv",
     "env",
-    "ini"
+    "ini",
+	"ftp-client",
+	"ftp-server",
+	"put-files",
+    "get-files",
+    "cli-app"
   ],
   "homepage": "https://phi-x.github.io",
   "authors": [

@@ -8,19 +8,7 @@ if (! in_array(PHP_SAPI, ['cli', 'phpdbg'])) {
     exit(1);
 }
 
-$loaded = false;
-
-foreach (['../../..', '..'] as $dir) {
-    if (file_exists($file = __DIR__."/$dir/vendor/autoload.php")) {
-        include_once $file;
-        $loaded = true;
-        break;
-    }
-}
-
-if (! $loaded) {
-    require_once __DIR__.'/../src/autoload.php';
-}
+require_once dirname(__DIR__).DIRECTORY_SEPARATOR.'autoload.php';
 
 $phi = new Phi\Application(__FILE__, dirname($file, 2));
 
