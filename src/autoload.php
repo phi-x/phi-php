@@ -31,6 +31,19 @@ class Autoloader
 
     public function loadClass(string $class, string $exts): bool
     {
+        /*
+        $namespace = __NAMESPACE__;
+        $directory = __DIR__.DIRECTORY_SEPARATOR;
+        $extension = '.'.pathinfo(__FILE__, PATHINFO_EXTENSION);
+        if (preg_match("/^$namespace\\\(?P<name>.*)$/", $name, $matches)) {
+            if (is_file($file = $directory.str_replace('\\', DIRECTORY_SEPARATOR, $matches['name']).$extension)) {
+                if (is_readable($file)) {
+                    require_once $file;
+                }
+            }
+        }
+        */
+
         $name = substr($class, strlen(__NAMESPACE__.'\\'));
 
         foreach (explode(',', $exts) as $ext) {
