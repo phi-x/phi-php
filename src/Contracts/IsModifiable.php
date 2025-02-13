@@ -2,7 +2,7 @@
 
 namespace Phi\Contracts;
 
-use Phi\Exception\IsNotFound;
+use Phi\Exceptions\IsNotFound;
 
 interface IsModifiable
 {

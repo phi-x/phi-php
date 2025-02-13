@@ -1,6 +1,6 @@
 <?php
 
-namespace Phi\Exception;
+namespace Phi\Exceptions;
 
 use Psr\Container\ContainerExceptionInterface;
 use Throwable;

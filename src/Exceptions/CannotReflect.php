@@ -1,6 +1,6 @@
 <?php
 
-namespace Phi\Exception;
+namespace Phi\Exceptions;
 
 final class CannotReflect extends \ReflectionException implements IsException
 {

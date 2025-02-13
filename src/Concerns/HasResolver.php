@@ -2,7 +2,7 @@
 
 namespace Phi\Concerns;
 
-use Phi\Exception\NotFound;
+use Phi\Exceptions\NotFound;
 use Phi\Singleton;
 
 trait HasResolver

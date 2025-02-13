@@ -1,6 +1,6 @@
 <?php
 
-namespace Phi\Exception;
+namespace Phi\Exceptions;
 
 final class BadValue extends \UnexpectedValueException implements IsException
 {

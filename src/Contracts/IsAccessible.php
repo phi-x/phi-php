@@ -2,8 +2,6 @@
 
 namespace Phi\Contracts;
 
-use Phi\Exception\IsNotFound;
-
 interface IsAccessible
 {
     /**
