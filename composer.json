@@ -29,6 +29,8 @@
     "put-files",
     "get-files",
     "input",
+    "path-parsing",
+    "path-parser",
     "output",
     "stream",
     "cli-app"
