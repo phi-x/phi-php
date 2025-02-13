@@ -24,9 +24,9 @@
     "dotenv",
     "env",
     "ini",
-	"ftp-client",
-	"ftp-server",
-	"put-files",
+    "ftp-client",
+    "ftp-server",
+    "put-files",
     "get-files",
     "cli-app"
   ],
