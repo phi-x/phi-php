@@ -11,15 +11,7 @@ class PathParsed
      *
      * @param  array  $info  The path parsed info
      */
-    public function __construct(array $info)
-    {
-        $this->info = $info;
-    }
-
-    /**
-     * @var array The path parsed info
-     */
-    protected array $info;
+    public function __construct(protected array $info) {}
 
     /**
      * Give the path info

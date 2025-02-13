@@ -121,7 +121,7 @@ class FtpEnv implements \ArrayAccess, \Countable, \IteratorAggregate, \Stringabl
                 }
                 $format .= "[$key]".PHP_EOL.self::format($value, false);
             } else {
-                $format .= $key.'='.self::stringify($value, $process_sections).PHP_EOL;
+                $format .= $key.'='.self::stringify($value).PHP_EOL;
             }
         }
 
@@ -147,7 +147,7 @@ class FtpEnv implements \ArrayAccess, \Countable, \IteratorAggregate, \Stringabl
             if (\preg_match('/^([\'"]).*\1$/', $value)) {
                 return $value;
             }
-            $value = \strpos($value, '\'') === false ? '\''.$value.'\'' : '"'.$value.'"';
+            $value = ! str_contains($value, '\'') ? '\''.$value.'\'' : '"'.$value.'"';
             $value = \str_replace('\\', '\\\\', $value);
         } else {
             $value = (string) $value;

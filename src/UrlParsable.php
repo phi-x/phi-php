@@ -11,15 +11,7 @@ class UrlParsable implements UrlParser
      *
      * @param  string  $url  The url to parse
      */
-    public function __construct(string $url)
-    {
-        $this->url = $url;
-    }
-
-    /**
-     * @var string The url to parse
-     */
-    protected string $url;
+    public function __construct(protected string $url) {}
 
     /**
      * Parse the url

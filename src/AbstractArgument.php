@@ -10,7 +10,7 @@ namespace Phi;
  * @author SIGUI Kessé Emmanuel
  * @license MIT
  */
-abstract class AbstractArgument implements ArgumentInterface
+abstract class AbstractArgument implements \Stringable, ArgumentInterface
 {
     /**
      * Parse the argument to string

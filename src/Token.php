@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phi;
 
-class Token
+class Token implements \Stringable
 {
     public function __construct(null|string|array $value = null)
     {
@@ -100,6 +100,6 @@ class Token
 
     public function __toString(): string
     {
-        return $this->getContent();
+        return (string) $this->getContent();
     }
 }

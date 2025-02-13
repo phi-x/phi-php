@@ -24,19 +24,12 @@ class CommandAction extends Command implements CommandActionInterface
      * @param  string  $name  The action name
      * @param  string  $alias  The action alias
      */
-    public function __construct(CommandInterface $command, string $name, ?callable $handler = null, string $alias = '', array $aliases = [])
+    public function __construct(protected CommandInterface $command, string $name, ?callable $handler = null, string $alias = '', array $aliases = [])
     {
-        $this->command = $command;
-
         parent::__construct($name, $handler);
 
         $this->setAlias($alias);
     }
-
-    /**
-     * @var namespace\CommandInterface The command object
-     */
-    protected CommandInterface $command;
 
     /**
      * Get the command object

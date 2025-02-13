@@ -11,15 +11,7 @@ class UrlParsed
      *
      * @param  array  $info  The url parsed info
      */
-    public function __construct(array $info)
-    {
-        $this->info = $info;
-    }
-
-    /**
-     * @var array The url parsed info
-     */
-    protected array $info;
+    public function __construct(protected array $info) {}
 
     /**
      * Give the URL info

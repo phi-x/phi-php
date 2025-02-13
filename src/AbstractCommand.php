@@ -27,6 +27,7 @@ abstract class AbstractCommand extends AbstractArgument implements CommandInterf
      *
      * @return string The name of argument
      */
+    #[\Override]
     public function __toString(): string
     {
         $string = parent::__toString();

@@ -11,15 +11,7 @@ class QueryParsable implements QueryParser
      *
      * @param  null|string  $query  The query to parse
      */
-    public function __construct(?string $query)
-    {
-        $this->query = $query;
-    }
-
-    /**
-     * @var null|string The query to parse
-     */
-    protected ?string $query;
+    public function __construct(protected ?string $query) {}
 
     /**
      * Parse the query
@@ -29,7 +21,7 @@ class QueryParsable implements QueryParser
      */
     public function parse(): QueryParsed
     {
-        parse_str($this->query, $data);
+        parse_str((string) $this->query, $data);
 
         return new QueryParsed($data);
     }

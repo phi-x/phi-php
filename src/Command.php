@@ -89,7 +89,7 @@ class Command extends AbstractCommand
         if ($this->hasActions()) {
             $action = null;
             foreach ($args as $key => $arg) {
-                if ($this->hasActions($arg)) {
+                if ($this->hasActions()) {
                     $action = $this->getAction($arg);
                     unset($args[$key]);
                     break;
@@ -148,7 +148,7 @@ class Command extends AbstractCommand
     public function setAction(string $name, ?callable $handler = null, string $alias = ''): CommandActionInterface
     {
         if (! $this->hasAction($name)) {
-            return $this->addAction($this, $name, $handler, $alias);
+            return $this->addAction($this, $name, $handler);
         }
 
         $action = $this->getAction($name);

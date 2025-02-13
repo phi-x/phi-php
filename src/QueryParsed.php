@@ -11,15 +11,7 @@ class QueryParsed
      *
      * @param  array  $data  The query parsed data
      */
-    public function __construct(array $data)
-    {
-        $this->data = $data;
-    }
-
-    /**
-     * @var array The query parsed data
-     */
-    protected array $data;
+    public function __construct(protected array $data) {}
 
     /**
      * Give the query data

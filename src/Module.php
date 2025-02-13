@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phi;
 
-class Module
+class Module implements \Stringable
 {
     public function __construct(protected string $file)
     {

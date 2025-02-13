@@ -79,9 +79,9 @@ class Compiler
             } elseif ($token->in(T_COMMENT, T_DOC_COMMENT)) {
                 $output .= '';
             } elseif ($token->is(T_OPEN_TAG)) {
-                $output .= preg_replace('/(\S+)\s+$/s', '$1 ', $token->getContent());
+                $output .= preg_replace('/(\S+)\s+$/s', '$1 ', (string) $token->getContent());
             } elseif ($token->is(T_CLOSE_TAG)) {
-                $output .= preg_replace('/\s+(\S+)$/s', ' $1', $token->getContent());
+                $output .= preg_replace('/\s+(\S+)$/s', ' $1', (string) $token->getContent());
             } elseif ($token->is(T_WHITESPACE)) {
                 if (
                     (
@@ -101,7 +101,7 @@ class Compiler
                     $output .= '';
                 } else {
                     $space = $token->getContent();
-                    $space = preg_replace('/\s+/s', ' ', $space);
+                    $space = preg_replace('/\s+/s', ' ', (string) $space);
                     $output .= $space;
                 }
             } else {

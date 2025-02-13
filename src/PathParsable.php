@@ -11,15 +11,7 @@ class PathParsable implements PathParser
      *
      * @param  string  $path  The path to parse
      */
-    public function __construct(string $path)
-    {
-        $this->path = $path;
-    }
-
-    /**
-     * @var string The path to parse
-     */
-    protected string $path;
+    public function __construct(protected string $path) {}
 
     /**
      * Parse the path
