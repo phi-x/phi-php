@@ -37,6 +37,8 @@
     "uri-parser",
     "output",
     "stream",
+    "type",
+    "let var",
     "cli-app"
   ],
   "homepage": "https://phi-x.github.io",

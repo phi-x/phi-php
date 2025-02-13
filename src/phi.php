@@ -4,7 +4,9 @@ use Phi\Backtrace;
 use Phi\FtpClient;
 use Phi\FtpDotenv;
 use Phi\FtpServer;
+use Phi\Let;
 use Phi\Map;
+use Phi\Statement;
 
 if (! function_exists('phi_backtrace')) {
     function phi_backtrace(int $flags = Backtrace::DEFAULT_FLAGS, int $reset = Backtrace::DEFAULT_RESET, int $limit = Backtrace::DEFAULT_LIMIT): Backtrace
@@ -120,5 +122,12 @@ if (! \function_exists('ftp_env')) {
         }
 
         return isset($key) ? $env->get($key, $default) : $env;
+    }
+}
+
+if (! function_exists('let')) {
+    function let(string|object $type, mixed $value): Statement
+    {
+        return Let::var($type, $value);
     }
 }
