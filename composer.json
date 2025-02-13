@@ -20,7 +20,10 @@
     "parser",
     "compressor",
     "archiver",
-    "installer"
+    "installer",
+    "dotenv",
+    "env",
+    "ini"
   ],
   "homepage": "https://phi-x.github.io",
   "authors": [
