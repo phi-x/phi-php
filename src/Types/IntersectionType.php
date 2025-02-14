@@ -17,8 +17,8 @@ class IntersectionType implements Type
 
     public function is(string|TypeName|Type $type): bool
     {
-        foreach($this->types as $type) {
-            if (!$type->is($type)) {
+        foreach ($this->types as $type) {
+            if (! $type->is($type)) {
                 return false;
             }
         }

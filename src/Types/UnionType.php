@@ -17,7 +17,7 @@ final class UnionType implements Type
 
     public function is(string|TypeName|Type $type): bool
     {
-        foreach($this->types as $type) {
+        foreach ($this->types as $type) {
             if ($type->is($type)) {
                 return true;
             }

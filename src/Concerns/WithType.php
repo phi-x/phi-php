@@ -14,7 +14,7 @@ trait WithType
 
     public function setType(string|TypeName|Type $type): static
     {
-        if (!$type instanceof Type) {
+        if (! $type instanceof Type) {
             $type = new NamedType($type);
         }
 
