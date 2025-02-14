@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Phi\Concerns;
 
-trait WithKeyAndValue
+trait AsArgument
 {
-    use WithKey;
+    use WithIndex;
     use WithValue;
 }
