@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Phi\Types;
+namespace Phi\Bases;
 
 use Phi\Concerns\AsType;
 use Phi\Contracts\IsType;
 
-abstract class Type implements IsType
+abstract class BaseType implements IsType
 {
     use AsType;
 

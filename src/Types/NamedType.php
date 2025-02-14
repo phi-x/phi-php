@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace Phi\Types;
 
+use Phi\Bases\BaseType;
 use Phi\Concerns\AsNamedType;
 use Phi\Contracts\IsNamedType;
 use Phi\Enums\BuiltinType;
 
-final class NamedType extends Type implements IsNamedType
+final class NamedType extends BaseType implements IsNamedType
 {
     use AsNamedType;
 
