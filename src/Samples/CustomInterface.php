@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phi\Sample;
+namespace Phi\Samples;
 
 use Phi\Contracts\IsEncapsulated;
 

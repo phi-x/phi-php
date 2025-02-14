@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phi\Sample;
+namespace Phi\Samples;
 
 final class CustomClass implements CustomInterface
 {
