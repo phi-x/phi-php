@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Phi\Objects;
 
 use Phi\Concerns\AsInt;
-use Phi\Types\IntType;
+use Phi\Contracts\IsInt;
 
-class IntObject implements IntType
+class IntObject implements IsInt
 {
     use AsInt;
 

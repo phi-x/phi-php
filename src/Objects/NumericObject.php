@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Phi\Objects;
 
 use Phi\Concerns\AsNumeric;
-use Phi\Types\NumericType;
+use Phi\Contracts\IsNumeric;
 
-class NumericObject implements NumericType
+class NumericObject implements IsNumeric
 {
     use AsNumeric;
 

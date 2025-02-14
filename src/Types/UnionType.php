@@ -4,25 +4,17 @@ declare(strict_types=1);
 
 namespace Phi\Types;
 
-use Phi\Enums\TypeName;
+use Phi\Concerns\AsUnionType;
+use Phi\Contracts\IsType;
+use Phi\Contracts\IsUnionType;
 
-final class UnionType implements Type
+final class UnionType extends Type implements IsUnionType
 {
-    protected array $types;
+    use AsUnionType;
 
-    public function __construct(Type ...$types)
+    public function __construct(bool $nullable = false, IsType ...$types)
     {
+        parent::__construct($nullable);
         $this->types = $types;
-    }
-
-    public function is(string|TypeName|Type $type): bool
-    {
-        foreach ($this->types as $type) {
-            if ($type->is($type)) {
-                return true;
-            }
-        }
-
-        return false;
     }
 }

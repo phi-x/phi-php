@@ -6,23 +6,20 @@ namespace Phi\Types;
 
 use Phi\Concerns\AsNamedType;
 use Phi\Contracts\IsNamedType;
-use Phi\Enums\TypeName;
+use Phi\Enums\BuiltinType;
 
-final class NamedType implements IsNamedType
+final class NamedType extends Type implements IsNamedType
 {
     use AsNamedType;
 
-    public function __construct(string|TypeName $name)
+    public function __construct(string|BuiltinType $name, bool $nullable = false)
     {
-        if ($name instanceof TypeName) {
+        parent::__construct($nullable);
+
+        if ($name instanceof BuiltinType) {
             $name = $name->value;
         }
 
-        $this->setName($name);
-    }
-
-    public function __toString(): string
-    {
-        return $this->getName();
+        $this->name = $name;
     }
 }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phi\Enums;
 
-enum TypeName: string
+enum BuiltinType: string
 {
     case Bool = 'bool';
 
@@ -19,4 +19,6 @@ enum TypeName: string
     case Object = 'object';
 
     case Resource = 'resource';
+
+    case Mixed = 'mixed';
 }

@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Phi\Concerns;
 
-use Phi\Enums\TypeName;
+use Phi\Contracts\IsType;
+use Phi\Enums\BuiltinType;
 use Phi\Types\NamedType;
-use Phi\Types\Type;
 
 trait WithType
 {
-    protected Type $type;
+    protected IsType $type;
 
-    public function setType(string|TypeName|Type $type): static
+    public function setType(string|BuiltinType|IsType $type): static
     {
-        if (! $type instanceof Type) {
+        if (! $type instanceof IsType) {
             $type = new NamedType($type);
         }
 
@@ -23,12 +23,12 @@ trait WithType
         return $this;
     }
 
-    public function getType(): Type
+    public function getType(): IsType
     {
         return $this->type;
     }
 
-    public function typeIs(string|TypeName|Type $type): bool
+    public function typeIs(string|BuiltinType|IsType $type): bool
     {
         return $this->type->is($type);
     }

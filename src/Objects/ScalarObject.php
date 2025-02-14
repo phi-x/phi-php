@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Phi\Objects;
 
 use Phi\Concerns\AsScalar;
-use Phi\Types\ScalarType;
+use Phi\Contracts\IsScalar;
 
-class ScalarObject implements ScalarType
+class ScalarObject implements IsScalar
 {
     use AsScalar;
 

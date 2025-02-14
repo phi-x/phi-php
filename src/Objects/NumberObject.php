@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Phi\Objects;
 
 use Phi\Concerns\AsNumber;
-use Phi\Types\NumberType;
+use Phi\Contracts\IsNumber;
 
-class NumberObject implements NumberType
+class NumberObject implements IsNumber
 {
     use AsNumber;
 

@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Phi\Contracts;
 
-use Phi\Enums\TypeName;
-use Phi\Types\Type;
+use Phi\Enums\BuiltinType;
 
 interface HasType
 {
-    public function setType(Type $type): static;
+    public function setType(IsType $type): static;
 
-    public function getType(): Type;
+    public function getType(): IsType;
 
-    public function typeIs(string|TypeName|Type $type): bool;
+    public function typeIs(string|BuiltinType|IsType $type): bool;
 }

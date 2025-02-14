@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Phi\Objects;
 
 use Phi\Concerns\AsString;
-use Phi\Types\StringType;
+use Phi\Contracts\IsString;
 
-class StringObject implements StringType
+class StringObject implements IsString
 {
     use AsString;
 

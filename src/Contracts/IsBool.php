@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Phi\Types;
+namespace Phi\Contracts;
 
-interface BoolType extends ScalarType
+interface IsBool extends IsScalar
 {
     public function __invoke(mixed $value = null): bool;
 

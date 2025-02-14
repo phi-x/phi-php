@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Phi\Objects;
 
 use Phi\Concerns\AsBool;
-use Phi\Types\BoolType;
+use Phi\Contracts\IsBool;
 
-class BoolObject implements BoolType
+class BoolObject implements IsBool
 {
     use AsBool;
 

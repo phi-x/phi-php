@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Phi\Types;
+namespace Phi\Contracts;
 
-interface FloatType extends NumberType
+interface IsFloat extends IsNumber
 {
     public function __invoke(mixed $value = null): float;
 

@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 namespace Phi;
 
+use Phi\Contracts\IsBool;
+use Phi\Contracts\IsFloat;
+use Phi\Contracts\IsInt;
+use Phi\Contracts\IsMixed;
+use Phi\Contracts\IsNumber;
+use Phi\Contracts\IsNumeric;
+use Phi\Contracts\IsScalar;
+use Phi\Contracts\IsString;
 use Phi\Objects\BoolObject;
 use Phi\Objects\FloatObject;
 use Phi\Objects\IntObject;
@@ -12,14 +20,6 @@ use Phi\Objects\NumberObject;
 use Phi\Objects\NumericObject;
 use Phi\Objects\ScalarObject;
 use Phi\Objects\StringObject;
-use Phi\Types\BoolType;
-use Phi\Types\FloatType;
-use Phi\Types\IntType;
-use Phi\Types\MixedType;
-use Phi\Types\NumberType;
-use Phi\Types\NumericType;
-use Phi\Types\ScalarType;
-use Phi\Types\StringType;
 
 class Cast
 {
@@ -30,82 +30,82 @@ class Cast
         return new self($value);
     }
 
-    public function intoBool(): BoolType
+    public function intoBool(): IsBool
     {
         return BoolObject::of($this->value);
     }
 
-    public function intoInt(): IntType
+    public function intoInt(): IsInt
     {
         return IntObject::of($this->value);
     }
 
-    public function intoFloat(): FloatType
+    public function intoFloat(): IsFloat
     {
         return FloatObject::of($this->value);
     }
 
-    public function intoString(): StringType
+    public function intoString(): IsString
     {
         return StringObject::of($this->value);
     }
 
-    public function intoNumber(): NumberType
+    public function intoNumber(): IsNumber
     {
         return NumberObject::of($this->value);
     }
 
-    public function intoNumeric(): NumericType
+    public function intoNumeric(): IsNumeric
     {
         return NumericObject::of($this->value);
     }
 
-    public function intoScalar(): ScalarType
+    public function intoScalar(): IsScalar
     {
         return ScalarObject::of($this->value);
     }
 
-    public function intoMixed(): MixedType
+    public function intoMixed(): IsMixed
     {
         return MixedObject::of($this->value);
     }
 
-    public static function toBool(mixed $value): BoolType
+    public static function toBool(mixed $value): IsBool
     {
         return self::from($value)->intoBool();
     }
 
-    public static function toInt(mixed $value): IntType
+    public static function toInt(mixed $value): IsInt
     {
         return self::from($value)->intoInt();
     }
 
-    public static function toFloat(mixed $value): FloatType
+    public static function toFloat(mixed $value): IsFloat
     {
         return self::from($value)->intoFloat();
     }
 
-    public static function toString(mixed $value): StringType
+    public static function toString(mixed $value): IsString
     {
         return self::from($value)->intoString();
     }
 
-    public static function toNumber(mixed $value): NumberType
+    public static function toNumber(mixed $value): IsNumber
     {
         return self::from($value)->intoNumber();
     }
 
-    public static function toNumeric(mixed $value): NumericType
+    public static function toNumeric(mixed $value): IsNumeric
     {
         return self::from($value)->intoNumeric();
     }
 
-    public static function toScalar(mixed $value): ScalarType
+    public static function toScalar(mixed $value): IsScalar
     {
         return self::from($value)->intoScalar();
     }
 
-    public static function toMixed(mixed $value): MixedType
+    public static function toMixed(mixed $value): IsMixed
     {
         return self::from($value)->intoMixed();
     }

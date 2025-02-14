@@ -4,9 +4,15 @@ declare(strict_types=1);
 
 namespace Phi\Types;
 
-use Phi\Enums\TypeName;
+use Phi\Concerns\AsType;
+use Phi\Contracts\IsType;
 
-interface Type
+abstract class Type implements IsType
 {
-    public function is(string|TypeName|self $type): bool;
+    use AsType;
+
+    public function __construct(bool $nullable = false)
+    {
+        $this->nullable = $nullable;
+    }
 }

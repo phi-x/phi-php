@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Phi\Objects;
 
 use Phi\Concerns\AsFloat;
-use Phi\Types\FloatType;
+use Phi\Contracts\IsFloat;
 
-class FloatObject implements FloatType
+class FloatObject implements IsFloat
 {
     use AsFloat;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Phi\Types;
+namespace Phi\Contracts;
 
-interface NumberType extends NumericType
+interface IsNumber extends IsNumeric
 {
     public function __invoke(mixed $value = null): int|float;
 

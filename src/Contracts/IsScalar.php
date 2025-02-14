@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Phi\Types;
+namespace Phi\Contracts;
 
-interface ScalarType extends \Stringable, MixedType
+interface IsScalar extends \Stringable, IsMixed
 {
     public function __invoke(mixed $value = null): bool|int|float|string;
 

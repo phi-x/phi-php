@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Phi\Objects;
 
 use Phi\Concerns\AsMixed;
-use Phi\Types\MixedType;
+use Phi\Contracts\IsMixed;
 
-class MixedObject implements MixedType
+class MixedObject implements IsMixed
 {
     use AsMixed;
 

@@ -4,25 +4,17 @@ declare(strict_types=1);
 
 namespace Phi\Types;
 
-use Phi\Enums\TypeName;
+use Phi\Concerns\AsIntersectionType;
+use Phi\Contracts\IsIntersectionType;
+use Phi\Contracts\IsType;
 
-class IntersectionType implements Type
+final class IntersectionType extends Type implements IsIntersectionType
 {
-    protected array $types;
+    use AsIntersectionType;
 
-    public function __construct(Type ...$types)
+    public function __construct(bool $nullable = false, IsType ...$types)
     {
+        parent::__construct($nullable);
         $this->types = $types;
-    }
-
-    public function is(string|TypeName|Type $type): bool
-    {
-        foreach ($this->types as $type) {
-            if (! $type->is($type)) {
-                return false;
-            }
-        }
-
-        return true;
     }
 }
