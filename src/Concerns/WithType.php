@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Phi\Concerns;
 
+use Phi\Concretes\Types\NamedType;
 use Phi\Contracts\IsType;
 use Phi\Enums\BuiltinType;
-use Phi\Types\NamedType;
 
 trait WithType
 {
