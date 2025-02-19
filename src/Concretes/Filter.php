@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Phi\Concretes;
 
+use Phi\Types\Type;
+
 class Filter
 {
     public static function validate(string $type): bool

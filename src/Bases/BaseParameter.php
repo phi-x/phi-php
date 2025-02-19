@@ -4,10 +4,14 @@ declare(strict_types=1);
 
 namespace Phi\Bases;
 
-use Phi\Concerns\AsParameter;
 use Phi\Contracts\IsParameter;
+use Phi\Contracts\IsType;
+use Phi\Enums\TypeName;
 
 abstract class BaseParameter implements IsParameter
 {
-    use AsParameter;
+    public function __construct(string|TypeName|IsType $type, string $name, mixed $value)
+    {
+        $this->setType($type)->setName($name)->setValue($value);
+    }
 }

@@ -2,11 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Phi\Concretes;
+namespace Phi\Bases;
 
-use Phi\Bases\BaseArgument;
-
-abstract class AbstractCommand extends BaseArgument implements CommandInterface
+abstract class BaseCommand extends BaseArgument implements CommandInterface
 {
     public function __invoke(...$args): bool
     {

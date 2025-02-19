@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Phi\Types;
 
-use Phi\Bases\BaseType;
 use Phi\Concerns\AsIntersectionType;
 use Phi\Contracts\IsIntersectionType;
 use Phi\Contracts\IsType;
 
-final class IntersectionType extends BaseType implements IsIntersectionType
+final class IntersectionType extends Type implements IsIntersectionType
 {
     use AsIntersectionType;
 

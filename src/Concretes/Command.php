@@ -4,13 +4,15 @@ declare(strict_types=1);
 
 namespace Phi\Concretes;
 
+use Phi\Bases\BaseCommand;
+
 /**
  * The command class
  *
  * @author SIGUI Kessé Emmanuel
  * @license MIT
  */
-class Command extends AbstractCommand
+class Command extends BaseCommand
 {
     /**
      * Create a new command
