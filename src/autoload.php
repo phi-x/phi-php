@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Phi\Autoloader;
+use Phi\Concretes\Autoloader;
 
-require_once __DIR__.DIRECTORY_SEPARATOR.'Autoloader.php';
+require_once __DIR__.'/Concretes/Autoloader.php';
 
 $phiLoader = (new Autoloader)->register();
 

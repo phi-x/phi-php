@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-use Phi\Backtrace;
+use Phi\Concretes\Backtrace;
+use Phi\Concretes\FtpClient;
+use Phi\Concretes\FtpDotenv;
+use Phi\Concretes\FtpServer;
+use Phi\Concretes\Let;
+use Phi\Concretes\Map;
+use Phi\Concretes\Statement;
 use Phi\Config\Loader as ConfigLoader;
-use Phi\FtpClient;
-use Phi\FtpDotenv;
-use Phi\FtpServer;
-use Phi\Let;
-use Phi\Map;
-use Phi\Statement;
 
 if (! function_exists('phi_backtrace')) {
     function phi_backtrace(int $flags = Backtrace::DEFAULT_FLAGS, int $reset = Backtrace::DEFAULT_RESET, int $limit = Backtrace::DEFAULT_LIMIT): Backtrace
@@ -145,4 +145,13 @@ function config_loader(string $dir): ConfigLoader
     }
 
     return $loaders[$dir];
+}
+
+function parse(string $code)
+{
+    $chars = str_split($code);
+
+    foreach ($chars as $column => $char) {
+        // ...
+    }
 }

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Phi\Concerns;
 
+use Phi\Concretes\Singleton;
 use Phi\Exceptions\NotFound;
 use Phi\Reflector;
-use Phi\Singleton;
 
 trait HasModifier
 {
