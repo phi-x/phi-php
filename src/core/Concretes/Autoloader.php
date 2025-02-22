@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Phi\Concretes;
 
+use InvalidArgumentException;
+
 class Autoloader
 {
     public readonly string $root;
@@ -15,6 +17,8 @@ class Autoloader
     public const EXTENSION_SEPARATOR = ',';
 
     public const NAMESPACE_SEPARATOR = '\\';
+
+    protected string $directories = '';
 
     /** @var array<string> */
     protected array $extensions = [];
@@ -28,14 +32,86 @@ class Autoloader
     public function __construct(string $root)
     {
         if (empty($root)) {
-            throw new \InvalidArgumentException('Empty root given');
+            throw new InvalidArgumentException('Empty root given');
         }
 
         if (! is_dir($root) || ! is_readable($root)) {
-            throw new \InvalidArgumentException("$root must me a readable directory");
+            throw new InvalidArgumentException("$root must me a readable directory");
         }
 
         $this->root = realpath($root).DIRECTORY_SEPARATOR;
+    }
+
+    public function setDirectories(string $directories): static
+    {
+        $this->directories = $directories;
+
+        return $this;
+    }
+
+    public function getDirectories(): string
+    {
+        return $this->directories;
+    }
+
+    /** @param array<string> $list */
+    public function setDirectoryList(array $list): static
+    {
+        return $this->setDirectories(implode(static::PATH_SEPARATOR, $list));
+    }
+
+    /** @return array<string> */
+    public function getDirectoryList(): array
+    {
+        return explode(static::PATH_SEPARATOR, $this->getDirectories());
+    }
+
+    public function hasNotDirectories(): bool
+    {
+        return empty($this->getDirectories());
+    }
+
+    public function hasDirectories(): bool
+    {
+        return ! $this->hasNotDirectories();
+    }
+
+    public function hasDirectory(string $directory): bool
+    {
+        return in_array($directory, $this->getDirectoryList(), true);
+    }
+
+    public function addDirectories(string|array $directories, bool $prepend = false): static
+    {
+        if (is_array($directories)) {
+            foreach ($directories as $directory) {
+                $this->addDirectories($directory, $prepend);
+            }
+
+            return $this;
+        }
+
+        if (! \is_dir($directories)) {
+            throw new InvalidArgumentException("No such directory $directories");
+        }
+
+        if (! \is_readable($directories)) {
+            throw new InvalidArgumentException("Cannot read directory $directories");
+        }
+
+        $directories = \realpath($directories).\DIRECTORY_SEPARATOR;
+
+        if ($this->hasNotDirectories()) {
+            return $this->setDirectories($directories);
+        }
+
+        if ($this->hasDirectory($directories)) {
+            return $this;
+        }
+
+        $directories = $prepend ? $directories.static::PATH_SEPARATOR.$this->getDirectories() : $this->getDirectories().static::PATH_SEPARATOR.$directories;
+
+        return $this->setDirectories($directories);
     }
 
     /** @param array<string, string|array<string>> $namespaces */

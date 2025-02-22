@@ -33,62 +33,6 @@ class Organizer
         return $COMPOSER_AUTOLOADERS[$root] ?? null;
     }
 
-    protected static string $PATH = '';
-
-    public static function addPath(string|array $path, bool $prepend = false): void
-    {
-        if (is_array($path)) {
-            foreach ($path as $p) {
-                self::addPath($p, $prepend);
-            }
-
-            return;
-        }
-
-        if (! \is_dir($path)) {
-            throw new Exception("No such directory $path", Exception::UNKNOWN_PATH);
-        }
-
-        if (! \is_readable($path)) {
-            throw new Exception("Cannot read directory $path", Exception::NOT_READABLE);
-        }
-
-        $path = \realpath($path).\DIRECTORY_SEPARATOR;
-
-        if (empty(self::$PATH)) {
-            self::setPath($path);
-
-            return;
-        }
-
-        if (in_array($path, self::getPathList(), true)) {
-            return;
-        }
-
-        $path = $prepend ? $path.\PATH_SEPARATOR.self::getPath() : self::getPath().\PATH_SEPARATOR.$path;
-        self::setPath($path);
-    }
-
-    public static function setPath(string $path): void
-    {
-        self::$PATH = $path;
-    }
-
-    public static function getPath(): string
-    {
-        return self::$PATH;
-    }
-
-    public static function setPathList(array $list): void
-    {
-        self::setPath(implode(\PATH_SEPARATOR, $list));
-    }
-
-    public static function getPathList(): array
-    {
-        return explode(\PATH_SEPARATOR, self::getPath());
-    }
-
     protected static array $EXT = [];
 
     public static function addExtensions(array $extensions): void

@@ -3,13 +3,14 @@
 declare(strict_types=1);
 
 use Phi\Concretes\Autoloader;
+use Phi\Concretes\AutoloaderInit;
 
-require_once __DIR__.'/core/Concretes/Autoloader.php';
+require_once __DIR__.'/core/Concretes/AutoloaderInit.php';
 
-$phiLoader = (new Autoloader(__DIR__))
-    ->setNamespace('Phi', ['core', 'components'])
-    ->useExtension('.phi')
-    ->useFile('phi')
-    ->register();
-
-return $phiLoader;
+return AutoloaderInit::getAutoloader(then: static function (Autoloader $autoloader) {
+    $autoloader
+        ->setNamespace('Phi', ['core', 'components'])
+        ->useExtension('.phi')
+        ->useFile('phi')
+        ->register();
+});
