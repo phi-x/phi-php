@@ -3,6 +3,8 @@
 
 declare(strict_types=1);
 
+use Phi\Runtime\Cli\Application;
+
 if (! in_array(PHP_SAPI, ['cli', 'phpdbg'])) {
     fprintf(STDERR, 'Cannot run %s from %s', __FILE__, PHP_SAPI);
     exit(1);
@@ -10,6 +12,6 @@ if (! in_array(PHP_SAPI, ['cli', 'phpdbg'])) {
 
 require_once dirname(__DIR__).DIRECTORY_SEPARATOR.'autoload.php';
 
-$phi = new Phi\Concretes\Application(__FILE__, getcwd());
+$phi = new Application(__FILE__, getcwd());
 
 $phi->run($argv);
