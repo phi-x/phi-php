@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Phi\Concerns;
 
-use Phi\Concretes\Singleton;
-use Phi\Exceptions\NotFound;
+use Phi\Di\NotFoundException;
+use Phi\Di\Singleton;
 
 trait HasResolver
 {
@@ -42,7 +42,7 @@ trait HasResolver
      *
      * @param  array<mixed>  $args
      *
-     * @throws NotFound When action is not defined
+     * @throws NotFoundException When action is not defined
      */
     public function resolve(string $name, array $args = []): mixed
     {
@@ -57,7 +57,7 @@ trait HasResolver
             return Singleton::getContainer()->invoke($action, ...$args);
         }
 
-        throw NotFound::with('Could not find action %s.', [$name]);
+        throw NotFoundException::new('Could not find action %s.', [$name]);
     }
 
     /**
@@ -80,7 +80,7 @@ trait HasResolver
             return Singleton::getContainer()->invoke($action, ...$args);
         }
 
-        throw NotFound::with('Could not find static action %s.', [$name]);
+        throw NotFoundException::new('Could not find static action %s.', [$name]);
     }
 
     /**

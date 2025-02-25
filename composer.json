@@ -63,7 +63,10 @@
   },
   "autoload": {
     "psr-4": {
-      "Phi\\": ["src/core/", "src/components/"]
+      "Phi\\": ["src/core/", "src/components/"],
+      "Phi\\Exceptions\\": "src/exceptions/",
+      "Phi\\Di\\": "src/di/",
+      "Phi\\Pm\\": "src/pm/"
     },
     "files": ["src/core/phi.php"]
   },

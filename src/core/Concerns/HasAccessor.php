@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Phi\Concerns;
 
-use Phi\Concretes\Singleton;
-use Phi\Exceptions\NotFound;
-use Phi\Reflector;
+use Phi\Di\NotFoundException;
+use Phi\Di\Reflector;
+use Phi\Di\Singleton;
 
 trait HasAccessor
 {
     /**
      * Access object properties using get methods or property value
      *
-     * @throws NotFound When property is not accessible
+     * @throws NotFoundException When property is not accessible
      */
     public function __get(string $name): mixed
     {
@@ -24,7 +24,7 @@ trait HasAccessor
             /** @var mixed $result */
             $result = Reflector::getPropertyValue($this, $name);
         } else {
-            throw NotFound::with('Unable to get property %s.', [$name]);
+            throw NotFoundException::new('Unable to get property %s.', [$name]);
         }
 
         return $result;

@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Phi\Concerns;
 
-use Phi\Concretes\Singleton;
-use Phi\Exceptions\NotFound;
-use Phi\Reflector;
+use Phi\Di\NotFoundException;
+use Phi\Di\Reflector;
+use Phi\Di\Singleton;
 
 trait HasModifier
 {
     /**
      * Modify the value of an object's properties using set methods
      *
-     * @throws NotFound When property is not defined
+     * @throws NotFoundException When property is not defined
      */
     public function __set(string $name, mixed $value): void
     {
@@ -22,7 +22,7 @@ trait HasModifier
         } elseif (property_exists($this, $name)) {
             Reflector::setPropertyValue($this, $name, $value);
         } else {
-            throw NotFound::with('Unable to set property %s.', [$name]);
+            throw NotFoundException::new('Unable to set property %s.', [$name]);
         }
     }
 
