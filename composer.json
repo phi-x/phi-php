@@ -1,6 +1,6 @@
 {
-  "name": "phi-x/phi",
-  "description": "Phi (φ) - A modern PHP superset with strong typing and OOP enhancements",
+  "name": "philang/phi",
+  "description": "Phi φ - A modern PHP superset with strong typing and OOP enhancements",
   "type": "library",
   "license": "MIT",
   "keywords": [
@@ -47,7 +47,7 @@
     "listen-event",
     "cli-app"
   ],
-  "homepage": "https://phi-x.github.io",
+  "homepage": "https://siguici.github.io/phi",
   "authors": [
     {
       "name": "Sigui Kessé Emmanuel",
@@ -56,10 +56,10 @@
     }
   ],
   "support": {
-    "source": "https://github.com/phi-x/phi",
-    "issues": "https://github.com/phi-x/phi/issues",
-    "chat": "https://github.com/orgs/phi-x/discussions",
-    "wiki": "https://github.com/phi-x/phi/wiki"
+    "source": "https://github.com/siguici/phi",
+    "issues": "https://github.com/siguici/phi/issues",
+    "chat": "https://github.com/orgs/siguici/discussions",
+    "wiki": "https://github.com/siguici/phi/wiki"
   },
   "autoload": {
     "psr-4": {

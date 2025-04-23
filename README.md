@@ -1,4 +1,4 @@
-# Phi <a href="https://phi-x.github.io" title="Phi"><img src="https://github.com/phi-x/art/blob/HEAD/phi-logo.svg?raw=true" alt="φ" height="24"/></a>
+# Phi <a href="https://siguici.github.io" title="Phi"><img src="https://github.com/siguici/art/blob/HEAD/phi-logo.svg?raw=true" alt="φ" height="24"/></a>
 **Phi** is a modern transpiler that enhances PHP with strong typing,
 object-oriented improvements, and an integrated Blade-inspired templating system.
 
@@ -14,7 +14,7 @@ object-oriented improvements, and an integrated Blade-inspired templating system
 Install Phi from [Composer](https://getcomposer.org) with:
 
 ```sh
-composer global require phi-x/phi:dev-main
+composer global require philang/phi:dev-main
 ```
 
 ### Try Phi
@@ -85,13 +85,7 @@ reducing boilerplate and improving readability.
 - Install Phi from [Packagist](https://packagist.org/packages/ske/bin) using [Composer](https://getcomposer.org):
 
 ```sh
-composer global require phi-x/phi:dev-main
-```
-
-- Install Phi with [NPM](https://npmjs.com/package/phi-x/phi) using [Node](https://nodejs.org/)
-
-```bash
-npm i -g @phi-x/phi@latest
+composer global require philang/phi:dev-main
 ```
 
 ## Usage
@@ -165,11 +159,11 @@ See the [LICENSE.md](LICENSE.md) file for more details.
 
 For any issues, questions, or feedback:
 
-- [Open an issue](https://github.com/phi-x/phi/issues/new/choose)
-- Join [our community discussions](https://github.com/phi-x/phi/discussions)
+- [Open an issue](https://github.com/siguici/phi/issues/new/choose)
+- Join [our community discussions](https://github.com/siguici/phi/discussions)
 
-[packagist-version-icon]: https://img.shields.io/packagist/v/phi-x/phi
-[packagist-version-link]: https://packagist.org/packages/phi-x/phi "Phi Releases"
+[packagist-version-icon]: https://img.shields.io/packagist/v/philang/phi
+[packagist-version-link]: https://packagist.org/packages/philang/phi "Phi Releases"
 
-[packagist-download-icon]: https://img.shields.io/packagist/dt/phi-x/phi
-[packagist-download-link]: https://packagist.org/packages/phi-x/phi "Phi Downloads"
+[packagist-download-icon]: https://img.shields.io/packagist/dt/philang/phi
+[packagist-download-link]: https://packagist.org/packages/philang/phi "Phi Downloads"
