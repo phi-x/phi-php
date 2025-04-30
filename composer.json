@@ -1,5 +1,5 @@
 {
-  "name": "philang/phi",
+  "name": "breephi/phi",
   "description": "Phi φ - A modern PHP superset with strong typing and OOP enhancements",
   "type": "library",
   "license": "MIT",
@@ -56,10 +56,10 @@
     }
   ],
   "support": {
-    "source": "https://github.com/siguici/phi",
-    "issues": "https://github.com/siguici/phi/issues",
-    "chat": "https://github.com/orgs/siguici/discussions",
-    "wiki": "https://github.com/siguici/phi/wiki"
+    "source": "https://github.com/breephi/phi",
+    "issues": "https://github.com/breephi/phi/issues",
+    "chat": "https://github.com/orgs/breephi/discussions",
+    "wiki": "https://github.com/breephi/phi/wiki"
   },
   "autoload": {
     "psr-4": {

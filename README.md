@@ -159,8 +159,8 @@ See the [LICENSE.md](LICENSE.md) file for more details.
 
 For any issues, questions, or feedback:
 
-- [Open an issue](https://github.com/siguici/phi/issues/new/choose)
-- Join [our community discussions](https://github.com/siguici/phi/discussions)
+- [Open an issue](https://github.com/breephi/phi/issues/new/choose)
+- Join [our community discussions](https://github.com/breephi/phi/discussions)
 
 [packagist-version-icon]: https://img.shields.io/packagist/v/philang/phi
 [packagist-version-link]: https://packagist.org/packages/philang/phi "Phi Releases"
