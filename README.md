@@ -2,22 +2,21 @@
 **Phi** is a modern transpiler that enhances PHP with strong typing,
 object-oriented improvements, and an integrated Blade-inspired templating system.
 
-[![packagist-version-icon]][packagist-version-link]
-[![packagist-download-icon]][packagist-download-link]
+[![packagist-version-icon]][packagist-version-link] [![packagist-download-icon]][packagist-download-link]
 
 ---
 
-## Quick Start
+## ⚡ Quick Start
 
-### Install Phi
+### 📦 Install Phi
 
-Install Phi from [Composer](https://getcomposer.org) with:
+Install Phi via [Composer](https://getcomposer.org) with:
 
 ```sh
-composer global require philang/phi:dev-main
+composer global require siguici/phi:dev-main
 ```
 
-### Try Phi
+### 🎉 Try Phi
 
 Create a `hello.phi` file:
 
@@ -31,77 +30,72 @@ Run it with:
 phi run hello --name=Phi
 ```
 
-This displays: **Hello, Phi!**
+This displays: **Hello, Phi!** 🎊
 
 ---
 
-## What is Phi?
+## ❓ What is Phi?
 
-Phi is a next-generation PHP transpiler that introduces strong typing,
-advanced object-oriented programming features, and an optimized templating system.
-By providing a more structured and scalable approach to PHP development,
-Phi helps developers write cleaner, more maintainable, and error-resistant code.
+Phi is a cutting-edge PHP framework that introduces:
 
-## Why Phi?
-
-- **Enhances PHP without breaking compatibility**: Phi allows developers to gradually
-adopt new features without rewriting existing PHP projects.
-- **Eliminates the need for PHPDoc and annotations**: Types are checked at both transpilation
-and runtime, reducing redundant documentation.
-- **Brings TypeScript-like flexibility**: Supports both static and dynamic typing
-for a more robust development experience.
-- **Integrates a powerful templating engine**: A Blade-inspired syntax simplifies
-HTML rendering for modern web applications.
+✅ **Strong typing** for better code reliability 🔍
+✅ **Advanced OOP features** for maintainable applications 🏗️
+✅ **A powerful templating system** for seamless UI rendering 🎨
+✅ **Full PHP compatibility** ensuring easy adoption 🔄
 
 ---
 
-## Features
+## 🔥 Why Choose Phi?
 
-- **Strong Typing**: Enforce and validate types at both compile-time and runtime,
-reducing bugs early in development.
-- **Advanced Object-Oriented Features**: Provides enhanced OOP capabilitie
-s beyond native PHP, making code more scalable and maintainable.
-- **Dynamic and Extensible Typing**: A flexible type system inspired by TypeScript,
-allowing both static and dynamic typing.
-- **Integrated Templating Engine**: A Blade-like system for cleaner,
-more structured HTML rendering, similar to Laravel's Blade.
-- **Full PHP Compatibility**: Any valid PHP code is also valid Phi code,
-enabling seamless integration into existing projects.
-- **No Need for PHPDoc & Annotations**: Types are checked directly in the code,
-reducing boilerplate and improving readability.
+- 🚀 **Enhances PHP without breaking compatibility** – Upgrade your projects without major rewrites.
+- ✍️ **No need for PHPDoc & annotations** – Types are enforced at both transpilation and runtime.
+- ⚡ **Inspired by TypeScript** – Offers both static and dynamic typing for flexibility.
+- 🎭 **Blade-like templating** – Clean and structured HTML rendering.
 
 ---
 
-## Requirements
+## 🌟 Features
 
-- [PHP](https://php.net/) 8.4 or above
-(at least 8.4.3 recommended to avoid potential bugs)
-- [Composer](https://getcomposer.org/)
-- [Git](https://git-scm.com/)
-- [Node](https://nodejs.org/) with [NPM](https://npmjs.com/) (Optional)
+- 🛡️ **Strong Typing** – Enforces types at compile-time and runtime.
+- 🏗️ **Advanced OOP** – Expands PHP’s object-oriented capabilities.
+- 🔄 **Dynamic & Static Typing** – Inspired by TypeScript.
+- 🖥️ **Integrated Templating Engine** – A Blade-like system for clean HTML rendering.
+- 🧩 **Seamless PHP Integration** – 100% compatible with existing PHP code.
 
-## Installation
+---
 
-- Install Phi from [Packagist](https://packagist.org/packages/ske/bin) using [Composer](https://getcomposer.org):
+## 📋 Requirements
+
+🔹 [PHP](https://php.net/) 8.4 or higher (8.4.3+ recommended)  
+🔹 [Composer](https://getcomposer.org/)  
+🔹 [Git](https://git-scm.com/)  
+🔹 [Node.js](https://nodejs.org/) (Optional)  
+
+---
+
+## 🚀 Installation
+
+Install Phi from [Packagist](https://packagist.org/packages/siguici/phi) using Composer:
 
 ```sh
-composer global require philang/phi:dev-main
+composer global require siguici/phi:dev-main
 ```
 
-## Usage
+---
 
-Phi transpiles `.phi` files into `.php`, enabling strong typing and additional
-features while maintaining PHP compatibility.
+## 🛠️ Usage
 
-### Example Command
+Phi transpiles `.phi` files into `.php`, introducing enhanced features while maintaining PHP compatibility.
+
+### 🔧 Example Command
 
 ```sh
 phi source.phi
 ```
 
-This converts `source.phi` into a PHP file, optimized for performance and execution.
+This converts `source.phi` into an optimized PHP file.
 
-### Example Code
+### 📝 Example Code
 
 ```php
 <?php
@@ -113,7 +107,7 @@ function greet<T extends string>(T $name): T {
 echo greet("World");
 ```
 
-#### Transpiled PHP Code
+#### 🏆 Transpiled PHP Code
 
 ```php
 <?php
@@ -127,43 +121,40 @@ echo greet("World");
 ?>
 ```
 
-Phi ensures that type mismatches are caught at transpilation,
-making PHP development safer and more efficient.
+Phi ensures type safety at transpilation, making PHP development more robust. 🛡️
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
-We welcome contributions! Whether it's fixing bugs, suggesting new features,
-or improving documentation, feel free to submit pull requests or open issues.
+We welcome contributions! 💖 Whether it's bug fixes, new features, or documentation improvements, feel free to contribute.
 
-### How to Contribute
+### 📌 How to Contribute
 
-1. Fork the repository.
-2. Create a new branch for your feature or fix.
-3. Implement your changes and add tests where needed.
-4. Submit a pull request.
+1. 🍴 Fork the repository.
+2. 🌱 Create a new branch.
+3. 🛠️ Implement your changes and add tests.
+4. 📤 Submit a pull request.
 
-Please follow the project's coding style and guidelines.
-
----
-
-## License
-
-**Phi φ** is licensed under the MIT License.
-See the [LICENSE.md](LICENSE.md) file for more details.
+Please follow our coding style and contribution guidelines. 🙌
 
 ---
 
-## Support
+## 📜 License
 
-For any issues, questions, or feedback:
+Phi is licensed under the **MIT License**. See the [LICENSE.md](LICENSE.md) file for details.
 
-- [Open an issue](https://github.com/breephi/phi/issues/new/choose)
-- Join [our community discussions](https://github.com/breephi/phi/discussions)
+---
 
-[packagist-version-icon]: https://img.shields.io/packagist/v/philang/phi
-[packagist-version-link]: https://packagist.org/packages/philang/phi "Phi Releases"
+## 💬 Support & Community
 
-[packagist-download-icon]: https://img.shields.io/packagist/dt/philang/phi
-[packagist-download-link]: https://packagist.org/packages/philang/phi "Phi Downloads"
+For questions, issues, or feedback:
+
+- 🚀 [Open an issue](https://github.com/siguici/phi/issues/new/choose)
+- 💬 Join [our discussions](https://github.com/siguici/phi/discussions)
+
+[packagist-version-icon]: https://img.shields.io/packagist/v/siguici/phi
+[packagist-version-link]: https://packagist.org/packages/siguici/phi "Phi Releases"
+
+[packagist-download-icon]: https://img.shields.io/packagist/dt/siguici/phi
+[packagist-download-link]: https://packagist.org/packages/siguici/phi "Phi Downloads"

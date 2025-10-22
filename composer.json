@@ -1,5 +1,5 @@
 {
-  "name": "breephi/phi",
+  "name": "phi-x/phi",
   "description": "Phi φ - A modern PHP superset with strong typing and OOP enhancements",
   "type": "library",
   "license": "MIT",
@@ -47,7 +47,7 @@
     "listen-event",
     "cli-app"
   ],
-  "homepage": "https://siguici.github.io/phi",
+  "homepage": "https://phi-x.github.io",
   "authors": [
     {
       "name": "Sigui Kessé Emmanuel",
@@ -56,19 +56,16 @@
     }
   ],
   "support": {
-    "source": "https://github.com/breephi/phi",
-    "issues": "https://github.com/breephi/phi/issues",
-    "chat": "https://github.com/orgs/breephi/discussions",
-    "wiki": "https://github.com/breephi/phi/wiki"
+    "source": "https://github.com/phi-x/phi",
+    "issues": "https://github.com/phi-x/phi/issues",
+    "chat": "https://github.com/orgs/phi-x/discussions",
+    "wiki": "https://github.com/phi-x/phi/wiki"
   },
   "autoload": {
     "psr-4": {
-      "Phi\\": ["src/core/", "src/components/"],
-      "Phi\\Exceptions\\": "src/exceptions/",
-      "Phi\\Di\\": "src/di/",
-      "Phi\\Pm\\": "src/pm/"
+      "Phi\\": ["src/php/"]
     },
-    "files": ["src/core/phi.php"]
+    "files": ["src/php/phi.php"]
   },
   "require": {
     "php": "^8.4",
@@ -83,7 +80,7 @@
     "coverage": "pest --coverage",
     "debug": ["@check", "@analyse", "@review", "@test"],
     "fix": ["@refactor", "@lint"],
-    "phi": "@php phi.php",
+    "phi": "v run .",
     "lint": "pint -v",
     "post-install-cmd": ["Phi\\Installer::postInstall"],
     "post-update-cmd": ["Phi\\Installer::postUpdate"],
@@ -92,7 +89,6 @@
     "review": "rector --dry-run --debug",
     "refactor": "rector"
   },
-  "bin": "./phi.php",
   "extra": {
     "branch-alias": {
       "dev-main": "0.x-dev"
