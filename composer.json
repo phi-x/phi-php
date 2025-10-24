@@ -63,9 +63,9 @@
   },
   "autoload": {
     "psr-4": {
-      "Phi\\": ["src/php/"]
+      "Phi\\": ["src/std/"]
     },
-    "files": ["src/php/phi.php"]
+    "files": ["src/std/phi.php"]
   },
   "require": {
     "php": "^8.4",
